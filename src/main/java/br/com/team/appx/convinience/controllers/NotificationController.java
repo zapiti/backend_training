@@ -34,6 +34,11 @@ public class NotificationController {
             return HttpStatus.BAD_REQUEST;
         }
 
+        return sendNotification(setNotificationParams(values));
+    }
+
+    private JSONObject setNotificationParams(@RequestBody FCNotification values) {
+
         JSONObject body = new JSONObject();
         body.put("to", NotificationKeys.tokenUserTest);
         body.put("priority", NotificationKeys.priority);
@@ -50,7 +55,10 @@ public class NotificationController {
         body.put("notification", notification);
         body.put("data", data);
 
+        return body;
+    }
 
+    private HttpStatus sendNotification(JSONObject body) {
         HttpEntity<String> request = new HttpEntity<>(body.toString());
 
         if (androidPushNotificationsService == null) {
@@ -70,8 +78,6 @@ public class NotificationController {
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
-
-
         return HttpStatus.BAD_REQUEST;
     }
 }
