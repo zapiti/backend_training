@@ -2,7 +2,9 @@ package br.com.team.appx.convinience.service;
 
 
 import br.com.team.appx.convinience.dto.CurrentUserDto;
+import br.com.team.appx.convinience.dto.UserDto;
 import br.com.team.appx.convinience.dto.UserMobileDto;
+import br.com.team.appx.convinience.model.entity.Role;
 import br.com.team.appx.convinience.model.entity.User;
 import br.com.team.appx.convinience.model.entity.UserId;
 import br.com.team.appx.convinience.security.Criptografia;
@@ -33,7 +35,7 @@ public class AuthenticateService {
         User user;
 
         if (users) {
-            user = getCurrentUser(userMobileDto);
+            user = getCurrentUserMobile(userMobileDto);
         } else {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Usuario não encontrado");
         }
@@ -41,13 +43,46 @@ public class AuthenticateService {
         String token = this.jwtTokenUtil.generateToken(user);
         CurrentUserDto currentUserDto = this.modelMapper.map(user, CurrentUserDto.class);
         currentUserDto.setAccessToken(token);
-        currentUserDto.setUserId(new UserId( Criptografia.md5(userMobileDto.getPhone()), Criptografia.md5(userMobileDto.getFiretoken())));
+        currentUserDto.setUserId(new UserId(Criptografia.md5(userMobileDto.getPhone()), Criptografia.md5(userMobileDto.getFiretoken())));
         return ResponseEntity.ok(currentUserDto);
     }
 
 
-    private User getCurrentUser(UserMobileDto userMobileDto) {
+    private User getCurrentUserMobile(UserMobileDto userMobileDto) {
         return this.userService.findUserMobile(userMobileDto);
+    }
+
+
+    public ResponseEntity<Object> authenticate(UserDto userDto) throws IOException {
+
+        UserId userId = new UserId(Criptografia.md5(userDto.getEmail()), Criptografia.md5(userDto.getPassword()));
+
+        Boolean users = this.userService.verifyExists(userId);        // entity does exist
+        User user = null;
+
+        if (users) {
+            user = getCurrentUser(userId);
+        }
+        if (user == null) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Usuario não encontrado");
+        }
+
+        String token = this.jwtTokenUtil.generateToken(user);
+        CurrentUserDto currentUserDto = this.modelMapper.map(user, CurrentUserDto.class);
+        currentUserDto.setAccessToken(token);
+        currentUserDto.setUserId(userId);
+
+        return ResponseEntity.ok(currentUserDto);
+    }
+
+
+    private User getCurrentUser(UserId userId) {
+        User user = this.userService.findUser(userId);
+        if (user.getRole() == Role.USER) {
+            return null;
+        }
+
+        return user;
     }
 
 }

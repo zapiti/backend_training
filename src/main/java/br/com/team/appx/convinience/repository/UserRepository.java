@@ -12,6 +12,9 @@ import org.springframework.stereotype.Repository;
 public interface UserRepository extends JpaRepository<User, Long> {
     boolean existsByfiretoken(String firetoken);
     User getByfiretoken(String firetoken);
-    @Query("select u from User u where u.password = :#{#user.password} and  u.email = :#{#user.email}")
-    User findUsersByPasswordFirstname(@Param("user") UserMobileDto user);
+    boolean existsByUserId(UserId userId);
+
+
+    @Query("select u from User u where u.userId = :surname")
+    User findUsersByPasswordFirstname(@Param("surname") UserId surname);
 }

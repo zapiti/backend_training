@@ -20,6 +20,6 @@ public class RegistreController {
 
     @PostMapping()
     public ResponseEntity<Object> createUser(@Valid @RequestBody UserMobileDto userMobileDto) throws IOException {
-        return this.registreService.createUser(userMobileDto);
+        return this.registreService.createUserMobile(userMobileDto);
     }
 }

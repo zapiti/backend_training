@@ -27,17 +27,15 @@ public class RegistreService {
     @Autowired
     private ModelMapper modelMapper;
 
-    public ResponseEntity<Object> createUser(UserMobileDto userMobileDto)throws IOException {
+    public ResponseEntity<Object> createUserMobile(UserMobileDto userMobileDto)throws IOException {
 
         Boolean users = this.userService.verifyExistsMobile(userMobileDto);        // entity does exist
         User user;
         if (users){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Usuario ja existe");
         }else{
-            user = creatNewUser(userMobileDto);
+            user = saveUserMobile(userMobileDto);
         }
-
-
         String token = this.jwtTokenUtil.generateToken(user);
 
         CurrentUserDto currentUserDto = this.modelMapper.map(user, CurrentUserDto.class);
@@ -47,10 +45,9 @@ public class RegistreService {
         return ResponseEntity.ok(currentUserDto);
     }
 
-    private User creatNewUser(UserMobileDto userMobileDto) {
+    private User saveUserMobile(UserMobileDto userMobileDto) {
 
         User user = new User();
-        user.setTelephone(userMobileDto.getPhone());
         user.setFiretoken(userMobileDto.getFiretoken());
         user.setRole(Role.USER);
         user.setUserId(new UserId(Criptografia.md5(userMobileDto.getPhone()), Criptografia.md5(userMobileDto.getFiretoken())));

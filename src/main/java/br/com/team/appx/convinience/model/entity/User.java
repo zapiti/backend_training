@@ -23,6 +23,9 @@ public class User {
     @NotNull
     @Column(nullable = false)
     private Role role;
+    @NotNull
+    @Column(nullable = false)
+    private UserId userId;
 
     @Column(nullable = true)
     private  String firetoken;
@@ -37,16 +40,8 @@ public class User {
     private String email;
 
     @Column(nullable = true)
-    private String telephone;
-
-    @Column(nullable = true)
     private Long cpf;
 
-    @Column(nullable = true)
-    private String password;
-
-    @Column(nullable = true)
-    private UserId userId;
 
     @Column(nullable = false)
     private LocalDateTime createdOn;

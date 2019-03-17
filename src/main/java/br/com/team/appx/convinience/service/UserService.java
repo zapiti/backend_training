@@ -27,8 +27,17 @@ class UserService {
 
     }
 
+    User findUser(UserId userId) {
+
+        return this.userRepository.findUsersByPasswordFirstname(userId);
+
+    }
+
     Boolean verifyExistsMobile(UserMobileDto userMobileDto) {
         return this.userRepository.existsByfiretoken(userMobileDto.getFiretoken());
+    }
+    Boolean verifyExists(UserId userId) {
+        return this.userRepository.existsByUserId(userId);
     }
 
     private LocalDateTime getCreatedOnById(Long id) {
