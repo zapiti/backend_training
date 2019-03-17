@@ -51,6 +51,9 @@ public class NotificationController {
         HashMap<String, String> data = new HashMap<>();
         data.put("title", values.title);
         data.put("body", values.body);
+        data.put("descricao", values.body);
+
+        data.put("codMensagem", "666");
 
         body.put("notification", notification);
         body.put("data", data);

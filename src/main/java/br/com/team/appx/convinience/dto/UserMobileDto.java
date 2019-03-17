@@ -1,19 +1,20 @@
 package br.com.team.appx.convinience.dto;
 
 import lombok.Data;
+import org.springframework.lang.Nullable;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 @Data
-public class UserCredentialsDto {
+public class UserMobileDto {
 
     @NotEmpty
-    private String username;
+    private String phone;
 
     @NotNull
-    private Long cpf;
+    private String firetoken;
 
-    @NotNull
-    private String password;
+
+
 }

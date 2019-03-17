@@ -1,9 +1,9 @@
 package br.com.team.appx.convinience.controllers;
 
-import br.com.team.appx.convinience.dto.CurrentUserDto;
-import br.com.team.appx.convinience.dto.UserCredentialsDto;
+import br.com.team.appx.convinience.dto.UserMobileDto;
 import br.com.team.appx.convinience.service.AuthenticateService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +19,7 @@ public class TokenController {
     private AuthenticateService authenticateService;
 
     @PostMapping()
-    public CurrentUserDto createToken(@Valid @RequestBody UserCredentialsDto userCredentialsDto) throws IOException {
-        return this.authenticateService.authenticate(userCredentialsDto);
+    public ResponseEntity<Object> createToken(@Valid @RequestBody UserMobileDto userMobileDto) throws IOException {
+        return this.authenticateService.authenticateMobile(userMobileDto);
     }
 }

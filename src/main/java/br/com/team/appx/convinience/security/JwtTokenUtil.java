@@ -1,6 +1,8 @@
 package br.com.team.appx.convinience.security;
 
 
+import br.com.team.appx.convinience.model.entity.Role;
+import br.com.team.appx.convinience.model.entity.User;
 import br.com.team.appx.convinience.util.NumberUtils;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -14,12 +16,14 @@ import static br.com.team.appx.convinience.security.JwtConstants.SECRET;
 
 @Component
 public class JwtTokenUtil {
-    public String generateToken(CurrentUser currentUser) {
-        Claims claims = Jwts.claims().setSubject(currentUser.getUsername());
+    public String generateToken(User user) {
+        Claims claims = Jwts.claims().setSubject(user.getFirst_name());
 
-        claims.put("username", currentUser.getUsername());
-        claims.put("userId", currentUser.getCpf());
-        claims.put("password", currentUser.getPassword());
+        claims.put("username", user.getFirst_name());
+
+        claims.put("fireToken", user.getFiretoken());
+
+        claims.put("role", user.getRole());
 
         return Jwts.builder()
                 .setClaims(claims)
@@ -28,13 +32,13 @@ public class JwtTokenUtil {
                 .compact();
     }
 
-    public String getUserPassordFromToken(String token) {
-        return (String) this.getAllClaimsFromToken(token).get("password");
+    public String getFireTokenFromToken(String token) {
+        return (String) this.getAllClaimsFromToken(token).get("fireToken");
+    }
+    public Role getRoleFromToken(String token) {
+        return (Role) this.getAllClaimsFromToken(token).get("role");
     }
 
-    public Long getUserIdFromToken(String token) {
-        return NumberUtils.toLong(this.getAllClaimsFromToken(token).get("userId"));
-    }
 
     public String getUsernameFromToken(String token) {
         return this.getClaimFromToken(token, Claims::getSubject);

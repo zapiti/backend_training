@@ -2,7 +2,7 @@ package br.com.team.appx.convinience.keys;
 
 public class NotificationKeys {
 
-   public static String tokenUserTest = "cTSL2z6OH40:APA91bHKzNoudrR2KO1RCp4SJPBVPdChrtkxKTNDuwb3UFyEJqtSgsUWDpxPq4EiZr_q2cCndR_q7F-7HgtvYY9GIKjk-65vKityzmOhed83XMa5tsT5b-ZCjjCuXEd-bGX53pEd8Lap";
+   public static String tokenUserTest = "daiRnLF71o4:APA91bF_cUyMLLz4LMjgnKIqRbVlwXCtvvt_7D9TuuSg4VDyv1daH57PZwi7_QIUs_TQUatwMv-AbT-tZQHfPmeHkz18aM0QMir7K6AnTj26KUQ9i3mp7eJYKaspbdkPZj4WDGy5U-Go";
 
     public static String priority ="high";
 }

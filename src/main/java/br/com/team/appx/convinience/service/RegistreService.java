@@ -2,13 +2,16 @@ package br.com.team.appx.convinience.service;
 
 
 import br.com.team.appx.convinience.dto.CurrentUserDto;
-import br.com.team.appx.convinience.dto.UserCredentialsDto;
+import br.com.team.appx.convinience.dto.UserMobileDto;
+import br.com.team.appx.convinience.model.entity.Role;
 import br.com.team.appx.convinience.model.entity.User;
 import br.com.team.appx.convinience.model.entity.UserId;
-import br.com.team.appx.convinience.security.CurrentUser;
+import br.com.team.appx.convinience.security.Criptografia;
 import br.com.team.appx.convinience.security.JwtTokenUtil;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -24,53 +27,35 @@ public class RegistreService {
     @Autowired
     private ModelMapper modelMapper;
 
-    public CurrentUserDto createUser(UserCredentialsDto userCredentialsDto)throws IOException {
+    public ResponseEntity<Object> createUser(UserMobileDto userMobileDto)throws IOException {
 
-        Boolean users = this.userService.verifyExists(new UserId(userCredentialsDto.getCpf(),userCredentialsDto.getPassword()));        // entity does exist
-        CurrentUser currentUser;
+        Boolean users = this.userService.verifyExistsMobile(userMobileDto);        // entity does exist
+        User user;
         if (users){
-            currentUser = getExistUser(userCredentialsDto);
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Usuario ja existe");
         }else{
-            currentUser = creatNewUser(userCredentialsDto);
+            user = creatNewUser(userMobileDto);
         }
 
 
-        String token = this.jwtTokenUtil.generateToken(currentUser);
+        String token = this.jwtTokenUtil.generateToken(user);
 
-        CurrentUserDto currentUserDto = this.modelMapper.map(currentUser, CurrentUserDto.class);
-
+        CurrentUserDto currentUserDto = this.modelMapper.map(user, CurrentUserDto.class);
+        currentUserDto.setUserId(new UserId( Criptografia.md5(userMobileDto.getPhone()), Criptografia.md5(userMobileDto.getFiretoken())));
         currentUserDto.setAccessToken(token);
 
-
-
-
-        return currentUserDto;
+        return ResponseEntity.ok(currentUserDto);
     }
 
-    private CurrentUser getExistUser(UserCredentialsDto userCredentialsDto) {
-        CurrentUser currentUser;//todo mudar
-        User user = this.userService.findUser(new UserId(userCredentialsDto.getCpf(),userCredentialsDto.getPassword()));
-        currentUser = new CurrentUser(
-                user.getUsername(),
-                userCredentialsDto.getPassword(),
-                user.getId().getCpf()
-       );
-        return currentUser;
-    }
-
-    private CurrentUser creatNewUser(UserCredentialsDto userCredentialsDto) {
-        CurrentUser currentUser;
-        currentUser = new CurrentUser(
-                userCredentialsDto.getUsername(),
-                userCredentialsDto.getPassword(),
-                userCredentialsDto.getCpf()
-        );
+    private User creatNewUser(UserMobileDto userMobileDto) {
 
         User user = new User();
-        user.setId(new UserId(currentUser.getCpf(),currentUser.getPassword()));
-        user.setUsername(currentUser.getUsername());
-
+        user.setTelephone(userMobileDto.getPhone());
+        user.setFiretoken(userMobileDto.getFiretoken());
+        user.setRole(Role.USER);
+        user.setUserId(new UserId(Criptografia.md5(userMobileDto.getPhone()), Criptografia.md5(userMobileDto.getFiretoken())));
         this.userService.saveUser(user);
-        return currentUser;
+
+        return user;
     }
 }

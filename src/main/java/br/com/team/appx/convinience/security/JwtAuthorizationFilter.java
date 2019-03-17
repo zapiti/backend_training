@@ -1,5 +1,6 @@
 package br.com.team.appx.convinience.security;
 
+import br.com.team.appx.convinience.model.entity.Role;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
@@ -45,12 +46,11 @@ public class JwtAuthorizationFilter extends OncePerRequestFilter {
             return null;
         }
 
-
-        Long userId = jwtTokenUtil.getUserIdFromToken(token);
         String username = jwtTokenUtil.getUsernameFromToken(token);
-        String password = jwtTokenUtil.getUserPassordFromToken(token);
+        String fireToken = jwtTokenUtil.getFireTokenFromToken(token);
+        Role role = jwtTokenUtil.getRoleFromToken(token);
 
-        CurrentUser currentUser = new CurrentUser(username, password,userId);
+        CurrentUser currentUser = new CurrentUser(username, fireToken, role);
 
         return new UsernamePasswordAuthenticationToken(currentUser, null, currentUser.getAuthorities());
     }

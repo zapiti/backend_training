@@ -2,43 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb7b666d-0e0c-4f71-8dc9-79e990c92107" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_dom4j_dom4j_2_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_5_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_modelmapper_modelmapper_2_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/config/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/RegistreController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/TokenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/dto/CurrentUserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/dto/UserCredentialsDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/model/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/model/entity/UserId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/CurrentUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/JwtAuthorizationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/JwtConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/JwtTokenUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/AuthenticateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/RegistreService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/util/GenerateIDUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/util/MyExeptionUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/util/NumberUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_jta_1_1_spec_1_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_4_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_0_11_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_3_7_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_18_1_GA.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_23_1_GA.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/model/entity/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/Criptografia.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/convinience.iml" beforeDir="false" afterPath="$PROJECT_DIR$/convinience.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/NotificationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/RegistreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/RegistreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/TokenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/TokenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/dto/CurrentUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/dto/CurrentUserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/dto/UserCredentialsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/dto/UserMobileDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/keys/NotificationKeys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/keys/NotificationKeys.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/model/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/model/entity/UserId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/model/entity/UserId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/CurrentUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/CurrentUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/JwtAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/JwtAuthorizationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/JwtTokenUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/AuthenticateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/AuthenticateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/RegistreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/RegistreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/controllers/NotificationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/controllers/NotificationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/controllers/RegistreController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/controllers/RegistreController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/controllers/TokenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/controllers/TokenController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/dto/CurrentUserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/dto/CurrentUserDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/dto/UserCredentialsDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/keys/NotificationKeys.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/keys/NotificationKeys.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/model/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/model/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/model/entity/UserId.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/model/entity/UserId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/security/CurrentUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/security/CurrentUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/security/JwtAuthorizationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/security/JwtAuthorizationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/security/JwtTokenUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/security/JwtTokenUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/service/AuthenticateService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/service/AuthenticateService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/service/RegistreService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/service/RegistreService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/team/appx/convinience/service/UserService.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,22 +48,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/CurrentUser.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/JwtTokenUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+            <state relative-caret-position="133">
+              <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/JwtAuthorizationFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -73,50 +62,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/AuthenticateService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="34" column="36" lean-forward="true" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+            <state relative-caret-position="180">
+              <caret line="43" column="39" lean-forward="true" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1748#1749#0" expanded="true" />
+                <element signature="e#1817#1818#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/RegistreService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-196">
-              <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/ConvinienceApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="e#326#327#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/RegistreController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/repository/UserRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -124,17 +76,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/model/entity/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="16" column="21" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="21" />
+            <state relative-caret-position="25">
+              <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/util/NumberUtils.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/Criptografia.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="69">
+              <caret line="6" column="25" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/model/entity/UserId.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/model/entity/Role.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -142,11 +115,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+            <state relative-caret-position="24">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.5.RELEASE/spring-data-commons-2.1.5.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/RegistreService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="55" column="34" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/repository/UserRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -157,6 +157,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin File" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -176,6 +177,8 @@
       <find>url</find>
       <find>password</find>
       <find>user</find>
+      <find>beare</find>
+      <find>firetoken</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -185,43 +188,45 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/helpers/AndroidPushNotificationsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/model/notification.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/model/FCNotification.java" />
         <option value="$PROJECT_DIR$/.idea/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/TestControler.kt" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/TestControler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/keys/NotificationKeys.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/test/TestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/test/TestNotificationController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/NotificationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/config/WebConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/util/NumberUtils.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/dto/CurrentUserDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/util/GenerateIDUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/util/ExeptionUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/NotificationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/helpers/AndroidPushNotificationsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/keys/NotificationKeys.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/RegistreController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/TokenController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/model/entity/Role.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/dto/CurrentUserDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/CurrentUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/JwtAuthorizationFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/JwtTokenUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/model/entity/UserId.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/dto/UserCredentialsDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/model/entity/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/TokenController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/config/WebSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/util/ExeptionUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/RegistreController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/AuthenticateService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/JwtTokenUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/repository/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/model/entity/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/Criptografia.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/model/entity/UserId.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/AuthenticateService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/RegistreService.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="31" />
-    <option name="y" value="23" />
+    <option name="x" value="55" />
+    <option name="y" value="72" />
     <option name="width" value="1400" />
     <option name="height" value="757" />
   </component>
@@ -231,8 +236,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -278,15 +281,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="convinience" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="backend_training" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backend_training" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="convinience" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -297,6 +291,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="convinience" type="462c0819:PsiDirectoryNode" />
               <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="backend_training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backend_training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="convinience" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="backend_training" type="b2602c69:ProjectViewProjectNode" />
@@ -364,10 +367,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552473545474" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552783666888" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -434,10 +439,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="31" y="23" width="1400" height="757" extended-state="0" />
-    <editor active="true" />
+    <frame x="55" y="72" width="1400" height="757" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3041237" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3173785" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -446,8 +450,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32932332" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32932332" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32932332" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -497,34 +501,39 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/UserService.java</url>
-          <line>27</line>
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/AuthenticateService.java</url>
+          <line>31</line>
           <properties />
-          <option name="timeStamp" value="5" />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/RegistreService.java</url>
-          <line>72</line>
+          <line>32</line>
           <properties />
-          <option name="timeStamp" value="9" />
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/RegistreService.java</url>
-          <line>56</line>
+          <line>58</line>
           <properties />
-          <option name="timeStamp" value="10" />
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/RegistreService.java</url>
-          <line>57</line>
+          <line>46</line>
           <properties />
-          <option name="timeStamp" value="11" />
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>new UserId(userCredentialsDto.getCpf(),userCredentialsDto.getPassword());</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>users.toString();</expression-string>
         <language-id>JAVA</language-id>
@@ -565,29 +574,12 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>new CurrentUser(
-                userCredentialsDto.getUsername(),
-                userCredentialsDto.getPassword(),
-                3L
-
-        )</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/gradlew.bat" />
     <entry file="file://$PROJECT_DIR$/gradlew" />
     <entry file="file://$PROJECT_DIR$/build.gradle" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/helpers/FirebaseResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/helpers/HeaderRequestInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -611,23 +603,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/TestControler.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/HomeController.java" />
     <entry file="file://$PROJECT_DIR$/.gitignore" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/test/TestNotificationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/keys/NotificationKeys.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/model/FCNotification.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -637,16 +612,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/convinience.iml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/helpers/AndroidPushNotificationsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="14" column="51" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitattributes">
       <provider selected="true" editor-type-id="text-editor">
@@ -668,20 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.4.RELEASE/spring-security-core-5.1.4.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetails.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/JwtConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -696,34 +647,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/dto/CurrentUserDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.5.RELEASE/spring-data-commons-2.1.5.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.5.RELEASE/spring-web-5.1.5.RELEASE.jar!/org/springframework/web/cors/UrlBasedCorsConfigurationSource.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/JwtTokenUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="32" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -734,23 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/model/entity/UserId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/NotificationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="30" column="63" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="82" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/util/GenerateIDUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -758,23 +668,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/config/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="36" column="39" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/TokenController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -799,30 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/dto/UserCredentialsDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/JwtAuthorizationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/CurrentUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/util/NumberUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -830,13 +699,126 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/AuthenticateService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/test/TestNotificationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="34" column="36" lean-forward="true" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+        <state relative-caret-position="165">
+          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/helpers/FirebaseResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/helpers/AndroidPushNotificationsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="14" column="207" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="207" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="31" column="36" lean-forward="true" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/keys/NotificationKeys.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="193" selection-start-line="4" selection-start-column="193" selection-end-line="4" selection-end-column="193" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.4.RELEASE/spring-security-core-5.1.4.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetails.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/JwtConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.4.RELEASE/spring-security-core-5.1.4.RELEASE.jar!/org/springframework/security/core/GrantedAuthority.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/JwtAuthorizationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="52" column="71" selection-start-line="52" selection-start-column="71" selection-end-line="52" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/dto/CurrentUserDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="15" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/RegistreController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/TokenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/CurrentUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="22" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/NotificationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/dto/UserMobileDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
@@ -850,41 +832,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/controllers/RegistreController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/JwtTokenUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/model/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+        <state relative-caret-position="133">
+          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/model/entity/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.5.RELEASE/spring-data-commons-2.1.5.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/model/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/security/Criptografia.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/AuthenticateService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="43" column="39" lean-forward="true" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1748#1749#0" expanded="true" />
+            <element signature="e#1817#1818#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/model/entity/UserId.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/team/appx/convinience/service/RegistreService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-196">
-          <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+        <state relative-caret-position="259">
+          <caret line="55" column="34" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
         </state>
       </provider>
     </entry>

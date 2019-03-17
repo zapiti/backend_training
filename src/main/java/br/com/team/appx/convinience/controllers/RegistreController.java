@@ -1,10 +1,9 @@
 package br.com.team.appx.convinience.controllers;
 
-import br.com.team.appx.convinience.dto.CurrentUserDto;
-import br.com.team.appx.convinience.dto.UserCredentialsDto;
-import br.com.team.appx.convinience.service.AuthenticateService;
+import br.com.team.appx.convinience.dto.UserMobileDto;
 import br.com.team.appx.convinience.service.RegistreService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +19,7 @@ public class RegistreController {
     private RegistreService registreService;
 
     @PostMapping()
-    public CurrentUserDto createUser(@Valid @RequestBody UserCredentialsDto userCredentialsDto) throws IOException {
-        return this.registreService.createUser(userCredentialsDto);
+    public ResponseEntity<Object> createUser(@Valid @RequestBody UserMobileDto userMobileDto) throws IOException {
+        return this.registreService.createUser(userMobileDto);
     }
 }

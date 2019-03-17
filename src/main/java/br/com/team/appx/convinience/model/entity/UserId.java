@@ -1,5 +1,6 @@
 package br.com.team.appx.convinience.model.entity;
 
+import br.com.team.appx.convinience.security.Criptografia;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,8 +16,11 @@ import java.util.Objects;
 public class UserId implements Serializable {
 
 
-    private Long cpf;
-    private String password;
+
+    private String user_key;
+    private String user_pass;
+
+
 
     @Override
     public boolean equals(Object o) {
@@ -25,11 +29,12 @@ public class UserId implements Serializable {
 
         UserId that = (UserId) o;
 
-        return Objects.equals(getPassword(), that.getPassword()) && Objects.equals(getCpf(), that.getCpf());
+        return Objects.equals(getUser_key(), Criptografia.md5(that.getUser_key())) && Objects.equals(getUser_pass()
+                , Criptografia.md5(that.getUser_pass()));
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getPassword(), getCpf());
+        return Objects.hash(Criptografia.md5(getUser_key()), Criptografia.md5(getUser_key()));
     }
 }
