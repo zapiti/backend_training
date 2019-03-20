@@ -1,8 +1,8 @@
 package br.com.team.appx.convinience.controllers.test;
 
 import br.com.team.appx.convinience.controllers.NotificationController;
-import br.com.team.appx.convinience.model.FCNotification;
-import org.springframework.http.HttpStatus;
+import br.com.team.appx.convinience.model.Notification;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -14,8 +14,8 @@ import java.io.IOException;
 public class TestNotificationController {
     @RequestMapping(path = "/testnofication", method = RequestMethod.GET)
     public @ResponseBody
-    HttpStatus testNotification() throws IOException {
-        FCNotification notification = new FCNotification();
+    ResponseEntity<Object> testNotification() throws IOException {
+        Notification notification = new Notification();
 
         notification.title = "Seu produto acabou";
 

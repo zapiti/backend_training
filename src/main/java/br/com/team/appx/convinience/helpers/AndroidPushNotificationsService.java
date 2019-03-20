@@ -12,7 +12,7 @@ import java.util.concurrent.CompletableFuture;
 @Service
 public class AndroidPushNotificationsService {
 
-    private static final String FIREBASE_SERVER_KEY = "AAAAc6cLkVM:APA91bEPJQD6jBy7fHyLI022Yv3dmEq37FdMy6FRmoXQnuQxiesRZl6Z4IJJX99z1CVHkDGXc7IPqgmciFsbzgejp3rpORKwst97Vc98oJNQIzhD1ROhdHiV3N9Qhxr5__XKvJCn8fhl";
+    private static final String FIREBASE_SERVER_KEY = "AAAAvtW-Lws:APA91bGph2ApbgpB8eRlmXH1_dtHStZbhqsmX0xm_y4xJMMKbx326D-fVkUZ--5j_MnJY3u21d7Tgb2G3oe146uIwzxj4hToCbX6Z_-lQHtU7SuWHbahOXR9hsCa20-BI7Q7SbHLSRSm";
 
     @Async
     public CompletableFuture<FirebaseResponse> send(HttpEntity<String> entity) {
