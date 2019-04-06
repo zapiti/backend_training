@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 @Service
 class UserService {
@@ -21,10 +22,8 @@ class UserService {
         return this.userRepository.save(user);
     }
 
-    User findUserMobile(UserMobileDto userMobileDto) {
-
+    Optional<User> findUserMobile(UserMobileDto userMobileDto) {
         return this.userRepository.getByfiretoken(userMobileDto.getFiretoken());
-
     }
 
     User findUser(UserId userId) {

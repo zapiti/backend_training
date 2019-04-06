@@ -4,6 +4,7 @@ package br.com.team.appx.convinience.service;
 import br.com.team.appx.convinience.dto.CurrentUserDto;
 import br.com.team.appx.convinience.dto.UserDto;
 import br.com.team.appx.convinience.dto.UserMobileDto;
+import br.com.team.appx.convinience.exception.UserInexistenteException;
 import br.com.team.appx.convinience.model.entity.Role;
 import br.com.team.appx.convinience.model.entity.User;
 import br.com.team.appx.convinience.model.entity.UserId;
@@ -13,9 +14,11 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.util.Optional;
 
 @Service
 public class AuthenticateService {
@@ -28,27 +31,24 @@ public class AuthenticateService {
     @Autowired
     private ModelMapper modelMapper;
 
-    public ResponseEntity<Object> authenticateMobile(UserMobileDto userMobileDto) throws IOException {
+    public ResponseEntity<Object> authenticateMobile(UserMobileDto userMobileDto) throws UsernameNotFoundException {
 
 
-        Boolean users = this.userService.verifyExistsMobile(userMobileDto);        // entity does exist
-        User user;
+     //   Boolean existsUser = this.userService.verifyExistsMobile(userMobileDto);        // entity does exist
 
-        if (users) {
-            user = getCurrentUserMobile(userMobileDto);
-        } else {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Usuario não encontrado");
-        }
+        Optional<User> usuarioOptional = getCurrentUserMobile(userMobileDto);
+        User user = usuarioOptional.orElseThrow(UserInexistenteException::new);
 
         String token = this.jwtTokenUtil.generateToken(user);
         CurrentUserDto currentUserDto = this.modelMapper.map(user, CurrentUserDto.class);
         currentUserDto.setAccessToken(token);
         currentUserDto.setUserId(new UserId(Criptografia.md5(userMobileDto.getPhone()), Criptografia.md5(userMobileDto.getFiretoken())));
+
         return ResponseEntity.ok(currentUserDto);
     }
 
 
-    private User getCurrentUserMobile(UserMobileDto userMobileDto) {
+    private Optional<User> getCurrentUserMobile(UserMobileDto userMobileDto) {
         return this.userService.findUserMobile(userMobileDto);
     }
 
