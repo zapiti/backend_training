@@ -1,4 +1,4 @@
-package br.com.team.appx.convinience.model.entity;
+package br.com.team.appx.convinience.model;
 
 public enum Role {
     ADM(1),

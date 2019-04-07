@@ -1,7 +1,7 @@
 package br.com.team.appx.convinience.security;
 
-import br.com.team.appx.convinience.model.entity.Role;
-import br.com.team.appx.convinience.model.entity.UserId;
+import br.com.team.appx.convinience.model.Role;
+import br.com.team.appx.convinience.model.UserId;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

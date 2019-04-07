@@ -1,4 +1,4 @@
-package br.com.team.appx.convinience.model.entity;
+package br.com.team.appx.convinience.model;
 
 import br.com.team.appx.convinience.security.Criptografia;
 import lombok.AllArgsConstructor;

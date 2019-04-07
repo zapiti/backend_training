@@ -1,6 +1,6 @@
 package br.com.team.appx.convinience.controllers.test;
 
-import br.com.team.appx.convinience.controllers.NotificationController;
+import br.com.team.appx.convinience.controllers.notification.NotificationController;
 import br.com.team.appx.convinience.model.Notification;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;

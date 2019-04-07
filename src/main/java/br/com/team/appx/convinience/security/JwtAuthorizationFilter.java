@@ -1,6 +1,6 @@
 package br.com.team.appx.convinience.security;
 
-import br.com.team.appx.convinience.model.entity.Role;
+import br.com.team.appx.convinience.model.Role;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;

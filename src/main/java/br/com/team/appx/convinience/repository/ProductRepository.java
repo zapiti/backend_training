@@ -1,5 +1,6 @@
 package br.com.team.appx.convinience.repository;
 
+import br.com.team.appx.convinience.model.Product;
 import br.com.team.appx.convinience.model.User;
 import br.com.team.appx.convinience.model.UserId;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -10,12 +11,6 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
-    boolean existsByfiretoken(String firetoken);
-    Optional<User> getByfiretoken(String firetoken);
-    boolean existsByUserId(UserId userId);
-
-
-    @Query("select u from User u where u.userId = :surname")
-    Optional<User> findUsersByPasswordFirstname(@Param("surname") UserId surname);
+public interface ProductRepository extends JpaRepository<Product, Long> {
+    Product findByName(String name);
 }

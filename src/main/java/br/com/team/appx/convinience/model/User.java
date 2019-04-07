@@ -1,8 +1,6 @@
-package br.com.team.appx.convinience.model.entity;
+package br.com.team.appx.convinience.model;
 
 import lombok.Data;
-import lombok.Generated;
-import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;

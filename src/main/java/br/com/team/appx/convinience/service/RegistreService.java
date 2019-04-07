@@ -3,12 +3,12 @@ package br.com.team.appx.convinience.service;
 
 import br.com.team.appx.convinience.dto.CurrentUserDto;
 import br.com.team.appx.convinience.dto.UserMobileDto;
-import br.com.team.appx.convinience.exception.UserInexistenteException;
-import br.com.team.appx.convinience.model.entity.Role;
-import br.com.team.appx.convinience.model.entity.User;
-import br.com.team.appx.convinience.model.entity.UserId;
+import br.com.team.appx.convinience.model.Role;
+import br.com.team.appx.convinience.model.User;
+import br.com.team.appx.convinience.model.UserId;
 import br.com.team.appx.convinience.security.Criptografia;
 import br.com.team.appx.convinience.security.JwtTokenUtil;
+import br.com.team.appx.convinience.service.user.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,7 +16,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.util.Optional;
 
 @Service
 public class RegistreService {
@@ -45,27 +44,6 @@ public class RegistreService {
         currentUserDto.setAccessToken(token);
 
         return ResponseEntity.ok(currentUserDto);
-    }
-
-    public ResponseEntity<Object> updateUser(UserId userId, User userdata) throws UserInexistenteException {
-
-        Optional<User> usuarioOptional = this.userService.findUser(userId);
-        User user = usuarioOptional.orElseThrow(UserInexistenteException::new);
-
-        if (userdata.getCpf() != null) {
-            user.setCpf(userdata.getCpf());
-        }
-        if (userdata.getFirst_name() != null) {
-            user.setFirst_name(userdata.getFirst_name());
-        }
-        if (userdata.getLast_name() != null) {
-            user.setLast_name(userdata.getLast_name());
-        }
-        if (userdata.getEmail() != null) {
-            user.setEmail(userdata.getEmail());
-        }
-        
-        return ResponseEntity.ok(this.userService.saveUser(user));
     }
 
 

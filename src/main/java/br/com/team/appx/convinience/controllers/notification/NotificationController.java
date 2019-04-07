@@ -1,4 +1,4 @@
-package br.com.team.appx.convinience.controllers;
+package br.com.team.appx.convinience.controllers.notification;
 
 
 import br.com.team.appx.convinience.dto.UserDto;

@@ -1,6 +1,6 @@
 package br.com.team.appx.convinience.dto;
 
-import br.com.team.appx.convinience.model.entity.UserId;
+import br.com.team.appx.convinience.model.UserId;
 import lombok.Data;
 
 @Data

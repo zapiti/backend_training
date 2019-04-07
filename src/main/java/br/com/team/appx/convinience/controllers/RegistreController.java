@@ -1,7 +1,6 @@
 package br.com.team.appx.convinience.controllers;
 
 import br.com.team.appx.convinience.dto.UserMobileDto;
-import br.com.team.appx.convinience.model.entity.User;
 import br.com.team.appx.convinience.security.JwtTokenUtil;
 import br.com.team.appx.convinience.service.RegistreService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,12 +23,5 @@ public class RegistreController {
     @PostMapping()
     public ResponseEntity<Object> createUser(@Valid @RequestBody UserMobileDto userMobileDto) throws IOException {
         return this.registreService.createUserMobile(userMobileDto);
-    }
-
-    @PutMapping()
-    public ResponseEntity<Object> updateUser(@RequestBody User user, @RequestHeader String token) throws IOException {
-
-
-        return this.registreService.updateUser(jwtTokenUtil.getUserId(token),user);
     }
 }

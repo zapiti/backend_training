@@ -1,11 +1,9 @@
 package br.com.team.appx.convinience.security;
 
 
-import br.com.team.appx.convinience.dto.CurrentUserDto;
-import br.com.team.appx.convinience.model.entity.Role;
-import br.com.team.appx.convinience.model.entity.User;
-import br.com.team.appx.convinience.model.entity.UserId;
-import br.com.team.appx.convinience.util.NumberUtils;
+import br.com.team.appx.convinience.model.Role;
+import br.com.team.appx.convinience.model.User;
+import br.com.team.appx.convinience.model.UserId;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -15,7 +13,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.Date;
 import java.util.LinkedHashMap;
-import java.util.Optional;
 import java.util.function.Function;
 
 import static br.com.team.appx.convinience.security.JwtConstants.SECRET;
@@ -50,7 +47,7 @@ public class JwtTokenUtil {
         return (String) this.getAllClaimsFromToken(token).get("fireToken");
     }
     public Role getRoleFromToken(String token) {
-        return (Role) this.getAllClaimsFromToken(token).get("role");
+        return Role.valueOf(this.getAllClaimsFromToken(token).get("role").toString());
     }
 
     public UserId getUserId(String token) {
