@@ -1,21 +1,33 @@
 package br.com.team.appx.convinience.security;
 
 
+import br.com.team.appx.convinience.dto.CurrentUserDto;
 import br.com.team.appx.convinience.model.entity.Role;
 import br.com.team.appx.convinience.model.entity.User;
+import br.com.team.appx.convinience.model.entity.UserId;
 import br.com.team.appx.convinience.util.NumberUtils;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
+import java.util.LinkedHashMap;
+import java.util.Optional;
 import java.util.function.Function;
 
 import static br.com.team.appx.convinience.security.JwtConstants.SECRET;
 
 @Component
 public class JwtTokenUtil {
+
+
+    @Autowired
+    private ModelMapper modelMapper;
+
+
     public String generateToken(User user) {
         Claims claims = Jwts.claims().setSubject(user.getFirst_name());
 
@@ -24,6 +36,8 @@ public class JwtTokenUtil {
         claims.put("fireToken", user.getFiretoken());
 
         claims.put("role", user.getRole());
+
+        claims.put("userId", user.getUserId());
 
         return Jwts.builder()
                 .setClaims(claims)
@@ -37,6 +51,12 @@ public class JwtTokenUtil {
     }
     public Role getRoleFromToken(String token) {
         return (Role) this.getAllClaimsFromToken(token).get("role");
+    }
+
+    public UserId getUserId(String token) {
+        LinkedHashMap map =   (LinkedHashMap) this.getAllClaimsFromToken(token).get("userId");
+
+        return new  UserId(map.get("user_key").toString(),map.get("user_pass").toString());
     }
 
 

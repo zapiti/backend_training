@@ -77,7 +77,8 @@ public class AuthenticateService {
 
 
     private User getCurrentUser(UserId userId) {
-        User user = this.userService.findUser(userId);
+        Optional<User> usuarioOptional = this.userService.findUser(userId);
+        User user = usuarioOptional.orElseThrow(UserInexistenteException::new);
         if (user.getRole() == Role.USER) {
             return null;
         }

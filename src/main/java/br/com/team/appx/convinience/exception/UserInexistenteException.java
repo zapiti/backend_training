@@ -8,6 +8,6 @@ public class UserInexistenteException extends RuntimeException {
     super(msg);
   }
   public UserInexistenteException() {
-    super("Usuario não é válido");
+    super("Usuario ou senha válidos");
   }
 }

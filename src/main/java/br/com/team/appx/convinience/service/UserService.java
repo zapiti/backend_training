@@ -26,10 +26,8 @@ class UserService {
         return this.userRepository.getByfiretoken(userMobileDto.getFiretoken());
     }
 
-    User findUser(UserId userId) {
-
+    Optional<User> findUser(UserId userId) {
         return this.userRepository.findUsersByPasswordFirstname(userId);
-
     }
 
     Boolean verifyExistsMobile(UserMobileDto userMobileDto) {

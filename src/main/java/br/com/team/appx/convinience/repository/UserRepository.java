@@ -17,5 +17,5 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
 
     @Query("select u from User u where u.userId = :surname")
-    User findUsersByPasswordFirstname(@Param("surname") UserId surname);
+    Optional<User> findUsersByPasswordFirstname(@Param("surname") UserId surname);
 }

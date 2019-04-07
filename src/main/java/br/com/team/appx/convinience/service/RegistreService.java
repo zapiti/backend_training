@@ -3,6 +3,7 @@ package br.com.team.appx.convinience.service;
 
 import br.com.team.appx.convinience.dto.CurrentUserDto;
 import br.com.team.appx.convinience.dto.UserMobileDto;
+import br.com.team.appx.convinience.exception.UserInexistenteException;
 import br.com.team.appx.convinience.model.entity.Role;
 import br.com.team.appx.convinience.model.entity.User;
 import br.com.team.appx.convinience.model.entity.UserId;
@@ -15,6 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.util.Optional;
 
 @Service
 public class RegistreService {
@@ -27,23 +29,45 @@ public class RegistreService {
     @Autowired
     private ModelMapper modelMapper;
 
-    public ResponseEntity<Object> createUserMobile(UserMobileDto userMobileDto)throws IOException {
+    public ResponseEntity<Object> createUserMobile(UserMobileDto userMobileDto) throws IOException {
 
         Boolean users = this.userService.verifyExistsMobile(userMobileDto);        // entity does exist
         User user;
-        if (users){
+        if (users) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Usuario ja existe");
-        }else{
+        } else {
             user = saveUserMobile(userMobileDto);
         }
         String token = this.jwtTokenUtil.generateToken(user);
 
         CurrentUserDto currentUserDto = this.modelMapper.map(user, CurrentUserDto.class);
-        currentUserDto.setUserId(new UserId( Criptografia.md5(userMobileDto.getPhone()), Criptografia.md5(userMobileDto.getFiretoken())));
+        currentUserDto.setUserId(new UserId(Criptografia.md5(userMobileDto.getPhone()), Criptografia.md5(userMobileDto.getFiretoken())));
         currentUserDto.setAccessToken(token);
 
         return ResponseEntity.ok(currentUserDto);
     }
+
+    public ResponseEntity<Object> updateUser(UserId userId, User userdata) throws UserInexistenteException {
+
+        Optional<User> usuarioOptional = this.userService.findUser(userId);
+        User user = usuarioOptional.orElseThrow(UserInexistenteException::new);
+
+        if (userdata.getCpf() != null) {
+            user.setCpf(userdata.getCpf());
+        }
+        if (userdata.getFirst_name() != null) {
+            user.setFirst_name(userdata.getFirst_name());
+        }
+        if (userdata.getLast_name() != null) {
+            user.setLast_name(userdata.getLast_name());
+        }
+        if (userdata.getEmail() != null) {
+            user.setEmail(userdata.getEmail());
+        }
+        
+        return ResponseEntity.ok(this.userService.saveUser(user));
+    }
+
 
     private User saveUserMobile(UserMobileDto userMobileDto) {
 
